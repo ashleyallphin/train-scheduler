@@ -1,0 +1,28 @@
+/* 
+yellow: #ffe400
+blue: #3db4ee
+light blue: #bbe4fa
+light gray: #a5aba7
+dark gray: #4d484c
+black
+*/
+
+body {
+    background-color: #ffe400;
+}
+
+.jumbotron {
+    background-color: #3db4ee;
+    color: white;
+    max-height: 140px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.form-half {
+    display: flex;
+}
+
+.card {
+    padding:0px;
+}
