@@ -1,7 +1,7 @@
 /* 
 yellow: #ffe400
 blue: #3db4ee
-light blue: #bbe4fa
+light blue: ##E7F0FE
 light gray: #a5aba7
 dark gray: #4d484c
 black
@@ -45,4 +45,29 @@ body {
 
 th {
     font-weight: bold;
+}
+
+.remove-button {
+    background-color: #3db4ee;
+    color: white;
+    margin-left: 10px;
+    padding: 0px 5px 0 5px;
+    float: right;
+}
+
+.remove-button:hover {
+    background-color: #3db4ee;
+    color: #ffe400;
+    margin-left: 10px;
+    padding: 0px 5px 0 5px;
+}
+
+.remove-button:focus {
+    box-shadow: 0 0 0 0.1rem rgba(255,228,0,1);
+    outline: 0;
+    color: #ffe400;
+}
+
+table.table-hover tbody tr:hover {
+    background-color: #E7F0FE; 
 }
