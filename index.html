@@ -9,11 +9,6 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/train.ico" />
 
-    <!-- Google Fonts -->
-
-    <!-- CSS Reset -->
-    <link rel="stylesheet" href="reset.css">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
@@ -29,20 +24,21 @@
 
     <!-- start jumbotron container -->
     <div class="container">
-
-        <!-- start row 1 -->
         <div class="row">
             <div class="jumbotron col-12">
                 <h1 class="text-center">Train Scheduler</h1>
             </div>
         </div>
     </div>
+
     <!-- start content container -->
     <div class="container">
         <!-- start row 2 -->
         <div class="row ">
             <div class="card col-12 bg-light mb-3"">
-                <div class=" card-header"><h4>Current Train Schedule</h4></div>
+                <div class=" card-header">
+                <h4>Current Train Schedule</h4>
+            </div>
             <div class="card-body">
                 <table class="table table-hover" id="train-form">
                     <thead>
@@ -62,40 +58,51 @@
         </div>
         <!-- start row 3 -->
         <div class="card col-12 bg-light mb-3"">
-                        <div class="card-header"><h4>Add Train</h4></div>
+            <div class=" card-header">
+            <h4>Add Train</h4>
+        </div>
         <div class="card-body">
             <form>
-                <div class = "form-half">
-                <div class="form-group col-6">
-                  <label for="train-name">Train Name</label>
-                  <input type="text" class="form-control" id="train-name" placeholder="">
+                <div class="form-half">
+                    <div class="form-group col-6">
+                        <label for="train-name">Train Name</label>
+                        <input type="text" class="form-control" id="train-name-input" placeholder="">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="destination-name">Destination</label>
+                        <input type="text" class="form-control" id="train-destination-input" placeholder="">
+                    </div>
                 </div>
-                <div class="form-group col-6">
-                    <label for="destination-name">Destination</label>
-                    <input type="text" class="form-control" id="destination-name" placeholder="">
-                  </div>
-                  </div>
-                  <div class = "form-half">
-                  <div class="form-group col-6">
-                    <label for="train-name">Train Time</label>
-                    <input type="text" class="form-control" id="train-time" placeholder="Enter in military time, HH:MM">
-                  </div>
-                  <div class="form-group col-6">
-                    <label for="train-frequency">Frequency</label>
-                    <input type="text" class="form-control" id="train-frequency" placeholder="Enter in minutes">
-                  </div>
-                  </form>
-           </form>     
+                <div class="form-half">
+                    <div class="form-group col-6">
+                        <label for="train-time">Train Time</label>
+                        <input type="text" class="form-control" id="train-time-input"
+                            placeholder="Enter in military time, HH:mm">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="train-frequency">Frequency</label>
+                        <input type="text" class="form-control" id="train-frequency-input" placeholder="Enter in minutes">
+                    </div>
+                </div>
+                
+                <div class="form-group col -12 text-center">
+                    <input class="btn col-12" type="submit" value="Submit" id="add-train-button">
+                </div>
+
+            </form>
         </div>
     </div>
     </div>
 
-
-
-
-
     <!-- end of body -->
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+        
     <!-- Bootstrap javaScript -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -104,10 +111,8 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
+    <!-- Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <!-- My javaScript -->
     <script src="assets/javascript/logic.js"></script>

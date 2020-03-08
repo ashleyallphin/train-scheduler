@@ -21,8 +21,24 @@ body {
 
 .form-half {
     display: flex;
+    padding: 0px;
 }
 
 .card {
     padding:0px;
+}
+
+#add-train-button {
+    background-color: #3db4ee;
+    color: white;
+    margin-top:20px;
+}
+
+#add-train-button:hover {
+    border: 2px solid #ffe400;
+}
+
+#add-train-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255,228,0,1);
+    outline: 0;
 }
