@@ -60,17 +60,24 @@ database.ref().on("child_added", function(snapshot) {
     var minutes = frequency - remainder;
     var arrival = moment().add(minutes,"m").format("hh:mm A");
 
-    console.log(remainder);
-    console.log(minutes);
-    console.log(arrival);
+    var uid = snapshot.key;
 
-    $("tbody").append(`
-    <tr>
-        <td>${name}</td>
-        <td>${destination}</td>
-        <td>${frequency}</td>
-        <td>${arrival}</td>
-        <td>${minutes}</td>
-    </tr>
-`);
+
+    var trainRow = $("<tr><td>"+name+"</td><td>"+destination+"</td><td>"+frequency+"</td><td>"+arrival+"</td><td>"+minutes+"<button class='remove-button'>&times;</button></td></tr>");
+
+    trainRow.attr("data-id", uid);
+    trainRow.attr("id", uid);
+
+    $("#train-table > tBody").append(trainRow);
+
+    
 })
+
+//deleting data
+$(document).on('click', '.remove-button', function() {
+    var newTrainID = $(this).parent().parent().attr('data-id');
+    var deleteTrain = firebase.database().ref(newTrainID);
+    deleteTrain.remove();
+    $(this).closest('tr').empty();
+})
+

@@ -53,6 +53,7 @@ th {
     margin-left: 10px;
     padding: 0px 5px 0 5px;
     float: right;
+    border-radius: 5px;
 }
 
 .remove-button:hover {
@@ -63,6 +64,29 @@ th {
 }
 
 .remove-button:focus {
+    box-shadow: 0 0 0 0.1rem rgba(255,228,0,1);
+    outline: 0;
+    color: #ffe400;
+}
+
+
+.update-button {
+    background-color: #3db4ee;
+    color: white;
+    margin-left: 10px;
+    padding: 0px 5px 0 5px;
+    float: right;
+    border-radius: 5px;
+}
+
+.update-button:hover {
+    background-color: #3db4ee;
+    color: #ffe400;
+    margin-left: 10px;
+    padding: 0px 5px 0 5px;
+}
+
+.update-button:focus {
     box-shadow: 0 0 0 0.1rem rgba(255,228,0,1);
     outline: 0;
     color: #ffe400;
